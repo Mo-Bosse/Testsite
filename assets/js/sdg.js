@@ -828,9 +828,7 @@ var indicatorModel = function (options) {
 
   var headlineColor = '777777';
   
-  this.colorOptions = [{"set":"sdg"},{"list":[]},{"number":9}];
-  this.colorSet = this.colorOptions['set'];
-  console.log("a",this.colorOptions['set'],"b",this.colorOptions.set,"c",this.colorOptions[0])
+  this.colorSet = "goal";
 
   var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
   var goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
@@ -854,9 +852,9 @@ var indicatorModel = function (options) {
   var colorSets = {'default':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdg':['e5243b', 'DDA63A', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','FD9D24','BF8B2E','3F7E44','0A97D9','56C02B','00689D','19486A'],
                   'goal': goalColors[goalNumber-1],
-                  'custom': this.colorOptions['list']};
+                  'custom': []};
 
-  this.numberOfColors = this.colorOptions['number']>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : this.colorOptions['number'];
+  this.numberOfColors = 9>colorSets[this.colorSet].length ? colorSets[this.colorSet].length : 9;
 
   var colors = colorSets[this.colorSet].slice(0,this.numberOfColors);
   
