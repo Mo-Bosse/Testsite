@@ -828,6 +828,7 @@ var indicatorModel = function (options) {
 
   var headlineColor = '777777';
   
+  this.colorOptions = [{"set":"sdg"},{"list":[]},{"number":9}];
   this.colorSet = null;
 
   var goalNumber = parseInt(this.indicatorId.slice(this.indicatorId.indexOf('_')+1,this.indicatorId.indexOf('-')));
