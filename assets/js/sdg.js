@@ -829,7 +829,7 @@ var indicatorModel = function (options) {
   var headlineColor = '777777';
   
   
-  this.colorSet = "sdg";
+  this.colorSet = "goal";
   this.numberOfColors = 9;
   this.customColors = [];
   var colors = opensdg.chartColors(this.indicatorId, this.colorSet, this.numberOfColors, this.customColors);
